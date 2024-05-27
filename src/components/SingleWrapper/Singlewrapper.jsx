@@ -6,9 +6,10 @@ import { FaFacebookF, FaTwitter } from "react-icons/fa";
 import Radio from "@mui/material/Radio";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Product from "../Products/Product";
 import cart2 from "../../app/img/cart_2.png";
+import { Circles } from "react-loader-spinner";
 import "./Single.css";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -16,6 +17,14 @@ import "swiper/css/pagination";
 const Singlewrapper = ({ single_data, data }) => {
   const [count, setCount] = useState(1);
   const [selectedValue, setSelectedValue] = useState("a");
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate data fetching
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000); // Replace with actual data fetching logic
+  }, []);
 
   const incrementCount = () => setCount(count + 1);
   const decrementCount = () => setCount(count > 1 ? count - 1 : 1);
@@ -31,6 +40,14 @@ const Singlewrapper = ({ single_data, data }) => {
   });
 
   const totalPrice = (single_data?.price || 0) * count;
+
+  if (loading) {
+    return (
+      <div className="loader">
+        <Circles height="80" width="80" color="#00BFFF" ariaLabel="loading" />
+      </div>
+    );
+  }
 
   return (
     <div>

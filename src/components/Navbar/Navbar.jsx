@@ -94,7 +94,9 @@ function Navbar() {
           <p>BAGS</p>
           <p>SNEAKERS</p>
           <p>BELT</p>
-          <p>CONTACT</p>
+          <Link className="link" href={"/pages/Contact"}>
+            <p>CONTACT</p>
+          </Link>
         </div>
         <button className="menu" onClick={() => setToggle(!toggle)}>
           <CiMenuBurger />

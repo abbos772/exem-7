@@ -1,0 +1,149 @@
+.nav_bottom {
+  height: 51px;
+  background: rgb(246, 247, 248);
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.nav_bottom h3 {
+  color: rgb(51, 160, 255);
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: -1px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.nav_bottom h4 {
+  color: rgb(38, 38, 38);
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: -1px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.contact {
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  flex-wrap: wrap;
+}
+.contact_img {
+  background-image: url(../../img/Union.svg);
+  width: 647px;
+  height: 715px;
+  padding: 120px;
+}
+.bir {
+  width: 510.15px;
+  height: 73.17px;
+  box-sizing: border-box;
+  border: 1px solid rgb(150, 147, 147);
+  border-radius: 0px 3px 3px 0px;
+  cursor: pointer;
+  box-shadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.01);
+  background: rgb(255, 255, 255);
+  display: flex;
+}
+.bir:hover {
+  border: 1px solid rgb(51, 160, 255);
+}
+.bir input {
+  flex: 1;
+  outline: 0;
+  border: 0;
+  background: 0;
+  padding: 20px;
+}
+.contact_text {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding-left: 20px;
+  padding-top: 40px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+form button {
+  width: 127px;
+  height: 64px;
+  background: #40bfff;
+  border: 0;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+form textarea {
+  width: 510.15px;
+  height: 229.76px;
+  padding: 20px;
+}
+.contact_img {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.contact_img h1 {
+  font-family: Poppins;
+  color: white;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 56.35px;
+  text-align: left;
+}
+.contact_img p {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.78px;
+  text-align: left;
+  color: white;
+}
+.last_search {
+  max-width: 633px;
+  height: 62px;
+  margin: 0 auto;
+  border: 2px solid rgb(188, 221, 254);
+  display: flex;
+  margin-top: 100px;
+}
+.last_search input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  background: 0;
+  padding: 20px;
+  color: rgb(38, 38, 38);
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: -1px;
+  letter-spacing: 0%;
+}
+.last_search button {
+  width: 127px;
+  background: rgb(64, 191, 255);
+  border: 0;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+@media (max-width: 768px) {
+}
