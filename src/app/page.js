@@ -13,19 +13,9 @@ import kronos from "./img/kronos.png";
 import "./page.scss";
 import Product from "../components/Products/Product";
 import { Rating } from "@mui/material";
-
-async function getData() {
-  const res = await fetch("https://fakestoreapi.com/products?limit=8");
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-
-  return res.json();
-}
-
+import { getData } from "../fetch/index";
 const Home = async () => {
-  let data = await getData();
+  let data = await getData("products");
 
   return (
     <div>

@@ -13,3 +13,6 @@
   margin: 0 auto;
   box-sizing: border-box;
 }
+.loading {
+  font-size: 50px;
+}

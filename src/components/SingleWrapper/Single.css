@@ -1,0 +1,192 @@
+.nav_bottom {
+  height: 51px;
+  background: rgb(246, 247, 248);
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.nav_bottom h3 {
+  color: rgb(51, 160, 255);
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: -1px;
+  letter-spacing: 0%;
+  text-align: left;
+  cursor: pointer;
+}
+.nav_bottom h4 {
+  color: rgb(38, 38, 38);
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: -1px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.single {
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+.single_cart {
+  width: 375px;
+  height: 271.68px;
+  background: #f6f6f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mini_cart {
+  width: 85.79px;
+  height: 86.25px;
+  border-radius: 8px;
+  background: #f6f6f6;
+}
+.single_minis {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-top: 135px;
+}
+.mini_cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.mini_cart:hover {
+  border: 2px solid #006cff;
+}
+.single_text h1 {
+  color: rgb(34, 38, 42);
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 2px solid rgb(246, 247, 248);
+  padding-bottom: 30px;
+}
+.rating p {
+  color: rgb(193, 200, 206);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: -1px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.rating h4 {
+  color: rgb(51, 160, 255);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: -1px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.single_text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.single_price {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.single_price h3 {
+  color: rgb(64, 191, 255);
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 180%;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+.single_price h4 {
+  color: rgb(144, 152, 177);
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+  text-align: left;
+  text-decoration-line: line-through;
+}
+.single_price p {
+  color: rgb(251, 113, 129);
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+.in {
+  display: flex;
+  align-items: center;
+  gap: 75px;
+}
+.in h2 {
+  color: rgb(38, 38, 38);
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.an h2 {
+  color: rgb(38, 38, 38);
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  letter-spacing: 0%;
+  text-align: left;
+  border-bottom: 2px solid rgb(246, 247, 248);
+  padding-bottom: 30px;
+}
+.in input {
+  font-size: 50px;
+}
+.in select {
+  width: 121.15px;
+  height: 38.28px;
+  border: 2px solid rgb(241, 243, 244);
+  padding: 10px;
+  border-radius: 3px;
+}
+.counter {
+  border-top: 2px solid rgb(246, 247, 248);
+  padding-top: 30px;
+  display: flex;
+}
+.count {
+  width: 123.28px;
+  height: 48.91px;
+  background: rgb(246, 247, 248);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.count button {
+  border: 0;
+  background: 0;
+  font-size: 20px;
+  color: rgb(51, 160, 255);
+  cursor: pointer;
+}
