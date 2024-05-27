@@ -130,6 +130,9 @@ span svg {
   gap: 36px;
 }
 @media (max-width: 1200px) {
+  .navbar_href.shrink {
+    top: 61px;
+  }
   .nav_top_flex {
     display: flex;
     align-items: center;

@@ -6,8 +6,13 @@ import shoe from "./img/shoe.png";
 import tex1 from "./img/tex1.png";
 import tex2 from "./img/tex2.png";
 import tex3 from "./img/tex3.png";
+import nike1 from "./img/nike1.png";
+import figma from "./img/figma.png";
+import tony from "./img/tony.png";
+import kronos from "./img/kronos.png";
 import "./page.scss";
 import Product from "../components/Products/Product";
+import { Rating } from "@mui/material";
 
 async function getData() {
   const res = await fetch("https://fakestoreapi.com/products?limit=8");
@@ -139,6 +144,98 @@ const Home = async () => {
                 and typesetting <br /> industry.
               </p>
             </div>
+          </div>
+          <div className="brends">
+            <h3 className="hh3">LATEST NEWS</h3>
+            <div className="brend_carts">
+              <div className="brend_bir">
+                <div>
+                  <Image src={nike1} />
+                </div>
+                <div className="brend_text">
+                  <p>01 Jan, 2015</p>
+                  <h3>Fashion Industry</h3>
+                  <h4>
+                    Lorem Ipsum is simply <br /> dummy text of the <br />{" "}
+                    printing and typesetting <br /> industry.
+                  </h4>
+                </div>
+              </div>
+              <div className="brend_bir">
+                <div>
+                  <Image src={figma} />
+                </div>
+                <div className="brend_text">
+                  <p>01 Jan, 2015</p>
+                  <h3>Best Design Tools</h3>
+                  <h4>
+                    Lorem Ipsum is simply <br /> dummy text of the <br />{" "}
+                    printing and typesetting <br /> industry.
+                  </h4>
+                </div>
+              </div>
+              <div className="brend_bir">
+                <div>
+                  <Image src={kronos} />
+                </div>
+                <div className="brend_text">
+                  <p>01 Jan, 2015</p>
+                  <h3>HR Community</h3>
+                  <h4>
+                    Lorem Ipsum is simply <br /> dummy text of the <br />{" "}
+                    printing and typesetting <br /> industry.
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="brends">
+            <h3 className="hh3">FEATURED PRODUCTS</h3>
+            <div className="brend_carts" style={{ gap: "5px" }}>
+              <div className="brend_bir">
+                <div>
+                  <Image src={tony} />
+                </div>
+                <div className="brend_text">
+                  <h3>Blue Swade Nike Sneakers</h3>
+                  <Rating />
+                  <div className="tony">
+                    <h3>$499</h3>
+                    <p>$599</p>
+                  </div>
+                </div>
+              </div>
+              <div className="brend_bir">
+                <div>
+                  <Image src={tony} />
+                </div>
+                <div className="brend_text">
+                  <h3>Blue Swade Nike Sneakers</h3>
+                  <Rating />
+                  <div className="tony">
+                    <h3>$499</h3>
+                    <p>$599</p>
+                  </div>
+                </div>
+              </div>
+              <div className="brend_bir">
+                <div>
+                  <Image src={tony} />
+                </div>
+                <div className="brend_text">
+                  <h3>Blue Swade Nike Sneakers</h3>
+                  <Rating />
+                  <div className="tony">
+                    <h3>$499</h3>
+                    <p>$599</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="last_search">
+            <input type="text" placeholder="Search query..." />
+            <button>Search</button>
           </div>
         </div>
       </div>

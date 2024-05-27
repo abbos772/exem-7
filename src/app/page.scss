@@ -20,6 +20,7 @@
   align-items: center;
   padding-top: 250px;
 }
+
 .card_nikeairs {
   max-width: 100%;
   height: auto;
@@ -36,7 +37,7 @@
   flex: 1;
   border-radius: 5px 0px 0px 0px;
   transition: 0.3s;
-  padding: 30px;
+  padding: 25px;
   .card_img {
     text-align: center;
   }
@@ -134,13 +135,17 @@
 .product_card {
   width: 312px;
   height: 389px;
+  position: relative;
   border: 3px solid rgb(246, 247, 248);
+}
+.pro_text {
+  position: relative;
+  top: -15px;
 }
 .product_card_img {
   width: 100%;
   height: 279.12px;
   border-radius: 5px;
-  background: #f6f6f6;
 }
 .product_card_text {
   text-align: center;
@@ -218,6 +223,7 @@
   display: flex;
   justify-content: space-between;
   padding: 20px;
+  flex-wrap: wrap;
 }
 .blue_text {
   display: flex;
@@ -279,6 +285,7 @@
   justify-content: space-around;
   gap: 20px;
   padding-top: 100px;
+  flex-wrap: wrap;
 }
 .tex1 h3 {
   color: rgb(34, 38, 42);
@@ -298,8 +305,159 @@
   letter-spacing: 0%;
   text-align: center;
 }
+.blue_img img {
+  margin-right: -200px;
+}
+.brends {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 200px;
+  flex-wrap: wrap;
+}
+.brends h3 {
+  color: rgb(34, 38, 42);
+  font-family: Poppins;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 53px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.hh3 {
+  padding-bottom: 70px;
+}
+.brend_bir {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.brend_text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.brend_text h3 {
+  color: rgb(34, 38, 42);
+  font-family: Poppins;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 33px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.brend_text h4 {
+  color: rgb(34, 38, 42);
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: -1px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.brend_text p {
+  color: rgb(193, 200, 206);
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.brend_carts {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.tony h3 {
+  color: rgb(255, 72, 88);
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.tony p {
+  text-decoration: line-through;
+}
+.last_search {
+  max-width: 633px;
+  height: 62px;
+  margin: 0 auto;
+  border: 2px solid rgb(188, 221, 254);
+  display: flex;
+  margin-top: 100px;
+}
+.last_search input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  background: 0;
+  padding: 20px;
+  color: rgb(38, 38, 38);
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: -1px;
+  letter-spacing: 0%;
+}
+.last_search button {
+  width: 127px;
+  background: rgb(64, 191, 255);
+  border: 0;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: 0%;
+  text-align: center;
+}
 @media (max-width: 768px) {
   .cards_text_href {
+    gap: 25px;
+  }
+  .cards_text_href p {
+    font-size: 16px;
+  }
+  .blue_img img {
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .brend_bir {
+    display: flex;
+    flex-direction: column;
     gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  .last_search {
+    max-width: 350px;
+  }
+}
+@media (max-width: 1500px) {
+  .blue_img img {
+    width: 350px;
+    height: 350px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .blue {
+    height: 100%;
+  }
+  .blue_flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }

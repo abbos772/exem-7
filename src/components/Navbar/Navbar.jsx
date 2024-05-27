@@ -73,7 +73,7 @@ function Navbar() {
           <div>
             <Image src={Logo} alt="logo" />
           </div>
-          <div className={`navbar_href ${toggle ? "show" : ""}`}>
+          <div className={`navbar_href ${toggle ? "show" : ""} ${shrink ? "shrink" : ""}`}>
             <p>HOME</p>
             <p>BAGS</p>
             <p>SNEAKERS</p>
