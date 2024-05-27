@@ -56,7 +56,9 @@ span svg {
   font-size: 25px;
   cursor: pointer;
 }
-
+.link {
+  text-decoration: none;
+}
 .icons {
   display: flex;
   align-items: center;
@@ -129,6 +131,7 @@ span svg {
   align-items: center;
   gap: 36px;
 }
+
 @media (max-width: 1200px) {
   .navbar_href.shrink {
     top: 61px;

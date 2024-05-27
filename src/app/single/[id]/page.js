@@ -2,10 +2,11 @@ import React from "react";
 import { getData } from "@/fetch/index";
 import Singlewrapper from "@/components/SingleWrapper/Singlewrapper";
 const Single = async ({ params: { id } }) => {
-  let data = await getData(`products/${id}`);
+  let single_data = await getData(`products/${id}`);
+  let data = await getData(`products`);
   return (
     <div>
-      <Singlewrapper data={data} />
+      <Singlewrapper single_data={single_data} data={data} />
     </div>
   );
 };

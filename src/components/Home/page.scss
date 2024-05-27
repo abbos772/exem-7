@@ -1,5 +1,5 @@
 .home_img {
-  background-image: url(./img/nike.png);
+  background-image: url(../../app/img/nike.png);
   height: 653.73px;
   width: 100%;
   background-position: center;
@@ -146,6 +146,10 @@
   width: 100%;
   height: 279.12px;
   border-radius: 5px;
+  object-fit: contain;
+}
+.product_card_img img {
+  object-fit: contain;
 }
 .product_card_text {
   text-align: center;

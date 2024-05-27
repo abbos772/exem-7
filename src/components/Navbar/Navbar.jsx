@@ -4,6 +4,7 @@ import { HiOutlineUser } from "react-icons/hi";
 import { LuHeart, LuShoppingCart } from "react-icons/lu";
 import { MdOutlineSearch } from "react-icons/md";
 import { CiMenuBurger } from "react-icons/ci";
+import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/app/img/FOOTER.png";
 import "./Navbar.scss";
@@ -77,15 +78,19 @@ function Navbar() {
         </div>
       </div>
       <div className="navbar container">
-        <div>
-          <Image src={Logo} alt="logo" />
-        </div>
+        <Link href={"/"}>
+          <div>
+            <Image src={Logo} alt="logo" />
+          </div>
+        </Link>
         <div
           className={`navbar_href ${toggle ? "show" : ""} ${
             shrink ? "shrink" : ""
           }`}
         >
-          <p>HOME</p>
+          <Link className="link" href={"/"}>
+            <p>HOME</p>
+          </Link>
           <p>BAGS</p>
           <p>SNEAKERS</p>
           <p>BELT</p>
