@@ -146,4 +146,25 @@ form textarea {
   text-align: center;
 }
 @media (max-width: 768px) {
+  .bir {
+    flex: 1;
+    width: 350.15px;
+    height: 73.17px;
+    box-sizing: border-box;
+    border: 1px solid rgb(150, 147, 147);
+    border-radius: 0px 3px 3px 0px;
+    cursor: pointer;
+    box-shadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.01);
+    background: rgb(255, 255, 255);
+
+    display: flex;
+  }
+  form textarea {
+    width: 350.15px;
+    height: 229.76px;
+    padding: 20px;
+  }
+  .contact_text {
+    margin: 0 auto;
+  }
 }
