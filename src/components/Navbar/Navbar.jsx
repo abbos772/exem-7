@@ -56,17 +56,21 @@ function Navbar() {
             </div>
             <div className="icons">
               <div className="icon">
-                <Link href={"/pages/Login"}>
+                <Link href={"/login"}>
                   <span>
                     <HiOutlineUser />
                   </span>
                 </Link>
-                <span>
-                  <LuHeart />
-                </span>
-                <span>
-                  <LuShoppingCart />
-                </span>
+                <Link href={"/wishes"}>
+                  <span>
+                    <LuHeart />
+                  </span>
+                </Link>
+                <Link href={"/cart"}>
+                  <span>
+                    <LuShoppingCart />
+                  </span>
+                </Link>
               </div>
               <h3>Items</h3>
               <div className="search_price">
@@ -96,7 +100,7 @@ function Navbar() {
           <p>BAGS</p>
           <p>SNEAKERS</p>
           <p>BELT</p>
-          <Link className="link" href={"/pages/Contact"}>
+          <Link className="link" href={"/contact"}>
             <p>CONTACT</p>
           </Link>
         </div>

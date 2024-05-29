@@ -1,5 +1,4 @@
 import Image from "next/image";
-import nike from "../../app/img/nike.png";
 import sumka from "../../app/img/sumka.png";
 import cross from "../../app/img/cross.png";
 import redcross from "../../app/img/redcross.png";
@@ -15,6 +14,7 @@ import "./page.scss";
 import Product from "../Products/Product";
 import { Rating } from "@mui/material";
 import { getData } from "@/fetch/index";
+import React, { memo } from "react";
 const Home = async () => {
   let data = await getData("products");
 
@@ -233,4 +233,4 @@ const Home = async () => {
     </div>
   );
 };
-export default Home;
+export default memo(Home);

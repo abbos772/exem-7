@@ -1,4 +1,5 @@
-import React from "react";
+import React, { memo } from "react";
+import Link from "next/link";
 import "./admin.scss";
 function Admin() {
   return (
@@ -38,11 +39,13 @@ function Admin() {
             delectus blanditiis quisquam quidem maiores suscipit. Dignissimos,
             ut repudiandae!
           </p>
-          <button>Log out</button>
+          <Link href={"/pages/Login"}>
+            <button className="login_btn">Log out</button>
+          </Link>
         </div>
       </div>
     </div>
   );
 }
 
-export default Admin;
+export default memo(Admin);

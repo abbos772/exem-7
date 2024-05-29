@@ -6,7 +6,7 @@ import { FaFacebookF, FaTwitter } from "react-icons/fa";
 import Radio from "@mui/material/Radio";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
-import React, { useState, useEffect } from "react";
+import React, { memo, useState, useEffect } from "react";
 import Product from "../Products/Product";
 import cart2 from "../../app/img/cart_2.png";
 import { Circles } from "react-loader-spinner";
@@ -228,4 +228,4 @@ const Singlewrapper = ({ single_data, data }) => {
   );
 };
 
-export default Singlewrapper;
+export default memo(Singlewrapper);

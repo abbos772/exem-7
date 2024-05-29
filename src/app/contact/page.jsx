@@ -1,5 +1,5 @@
-"use client"; // Add this line to mark the parent component as a Client Component
-import React, { useState } from "react";
+"use client";
+import React, { useState, memo } from "react";
 import "./contact.scss";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -127,4 +127,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default memo(Contact);

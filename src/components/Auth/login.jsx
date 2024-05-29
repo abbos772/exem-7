@@ -10,7 +10,6 @@ export default NextAuth({
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
-        // Fake Store API orqali foydalanuvchini tekshirish
         const res = await fetch("https://fakestoreapi.com/auth/login", {
           method: "POST",
           headers: {

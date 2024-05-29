@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 import { useRouter } from "next/navigation";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -22,14 +22,14 @@ function Login() {
     });
     if (res.ok) {
       const data = await res.json();
-      if (data.token) { 
-        toast.success("Login successful!");
+      if (data.token) {
+        toast.success("Successful!");
         router.push("/pages/Admin");
       } else {
         toast.error("Login failed");
       }
     } else {
-      toast.error("An error occurred");
+      toast.error("Parol yoki login xato");
     }
   };
 
@@ -73,4 +73,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default memo(Login);

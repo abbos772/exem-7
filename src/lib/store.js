@@ -1,12 +1,13 @@
 "use client";
-import toggleLike from "@/lib/slice/wishlistSlice";
-
+import toogleLike from "../lib/slice/wishlistSlice";
+import cart from "../lib/slice/cardslice";
 import { configureStore } from "@reduxjs/toolkit";
 
 export const store = () => {
   return configureStore({
     reducer: {
-      wishes: toggleLike,
+      wishes: toogleLike,
+      cart,
     },
   });
 };
