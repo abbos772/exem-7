@@ -1,18 +1,26 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import { Rating } from "@mui/material";
 import { LuHeart } from "react-icons/lu";
 import { FiShoppingCart } from "react-icons/fi";
+import { useDispatch } from "react-redux";
+import { addToWishlist } from "../context/slice/wishlistSlice";
 import Link from "next/link";
 import "./Product.scss";
 const Product = ({ data }) => {
+  // const dispatch = useDispatch();
+
+  const handleAddToWishlist = () => {
+    dispatch(addToWishlist(data));
+  };
   let product = data?.map((el) => (
     <div key={el.id} className="product_card">
       <div className="product_card_img">
         <div className="product_hover">
           <Image alt={el?.title} width={200} height={200} src={el?.image} />
           <div className="pro_svgs">
-            <div className="pro_like">
+            <div onClick={handleAddToWishlist} className="pro_like">
               <LuHeart />
             </div>
             <div className="pro_cart">

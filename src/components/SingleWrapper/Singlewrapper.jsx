@@ -20,10 +20,9 @@ const Singlewrapper = ({ single_data, data }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate data fetching
     setTimeout(() => {
       setLoading(false);
-    }, 2000); // Replace with actual data fetching logic
+    }, 2000);
   }, []);
 
   const incrementCount = () => setCount(count + 1);

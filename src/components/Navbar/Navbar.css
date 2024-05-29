@@ -11,20 +11,16 @@ header {
   transition: height 0.3s ease, top 0.3s ease;
 }
 
-.navbar-container.shrink {
-  .navbar_top {
-    height: 0;
-    overflow: hidden;
-    opacity: 0;
-  }
-
-  .navbar {
-    height: 60px;
-
-    .navbar_href p {
-      font-size: 18px;
-    }
-  }
+.navbar-container.shrink .navbar_top {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+.navbar-container.shrink .navbar {
+  height: 60px;
+}
+.navbar-container.shrink .navbar .navbar_href p {
+  font-size: 18px;
 }
 
 .navbar_top {
@@ -57,10 +53,12 @@ span svg {
   cursor: pointer;
   color: #000000;
 }
+
 .link {
   text-decoration: none;
   color: black;
 }
+
 .icons {
   display: flex;
   align-items: center;
@@ -103,20 +101,18 @@ span svg {
   display: flex;
   align-items: center;
   gap: 97px;
-
-  p {
-    cursor: pointer;
-    font-family: Poppins;
-    font-size: 22px;
-    font-weight: 500;
-    line-height: 30px;
-    letter-spacing: 0%;
-    text-align: left;
-  }
-
-  p:hover {
-    color: rgb(64, 191, 255);
-  }
+}
+.navbar_href p {
+  cursor: pointer;
+  font-family: Poppins;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.navbar_href p:hover {
+  color: rgb(64, 191, 255);
 }
 
 .menu {
@@ -128,6 +124,7 @@ span svg {
   text-align: left;
   padding-top: 15px;
 }
+
 .icon {
   display: flex;
   align-items: center;
@@ -144,7 +141,6 @@ span svg {
     justify-content: center;
     width: 100%;
   }
-
   .icon {
     position: fixed;
     left: 0;
@@ -160,7 +156,6 @@ span svg {
   .nav_top {
     display: none;
   }
-
   .nav_med_flex {
     position: fixed;
     background: white;
@@ -172,11 +167,9 @@ span svg {
     gap: 170px;
     border-top: 1px solid rgb(215, 215, 215);
   }
-
   .menu {
     display: block;
   }
-
   .navbar_href {
     position: absolute;
     top: 130px;
@@ -184,7 +177,7 @@ span svg {
     width: 100%;
     padding: 30px 0;
     background: #f7f7f7;
-    box-shadow: 0 3px 5px #0002;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1333333333);
     flex-direction: column;
     gap: 20px;
     justify-content: center;
@@ -195,8 +188,7 @@ span svg {
     transform-origin: top;
     transform: scaleY(0);
   }
-
   .navbar_href.show {
     transform: scaleY(1);
   }
-}
+}/*# sourceMappingURL=Navbar.css.map */

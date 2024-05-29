@@ -56,9 +56,11 @@ function Navbar() {
             </div>
             <div className="icons">
               <div className="icon">
-                <span>
-                  <HiOutlineUser />
-                </span>
+                <Link href={"/pages/Login"}>
+                  <span>
+                    <HiOutlineUser />
+                  </span>
+                </Link>
                 <span>
                   <LuHeart />
                 </span>
@@ -78,7 +80,7 @@ function Navbar() {
         </div>
       </div>
       <div className="navbar container">
-        <Link href={"/"}>
+        <Link className="link" href={"/"}>
           <div>
             <Image src={Logo} alt="logo" />
           </div>
