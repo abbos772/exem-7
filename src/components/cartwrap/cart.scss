@@ -97,3 +97,57 @@
   letter-spacing: 0%;
   text-align: left;
 }
+.subtotal {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 377.1px;
+  height: 310px;
+  text-align: left;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 90px;
+}
+.pr_t {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(34, 38, 42);
+  font-family: Poppins;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 45px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.subtotal button {
+  width: 374.12px;
+  height: 60px;
+  background: rgb(51, 160, 255);
+  border: 0;
+  color: rgb(255, 255, 255);
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.last1 {
+  width: 369px;
+  height: 60px;
+  display: flex;
+  flex-direction: row-reverse;
+  border: 1px solid #e1e3e4;
+}
+.last1 button {
+  border: 0;
+  color: rgb(255, 255, 255);
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: 0%;
+  text-align: center;
+  background: rgb(51, 160, 255);
+  width: 118px;
+  height: 60px;
+}

@@ -6,7 +6,7 @@ import { removeItemFromCart } from "@/lib/slice/cardslice";
 import x from "@/app/img/x.png";
 import "./cart.scss";
 
-function wishWrap() {
+function WishWrap() {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.cart.value);
 
@@ -26,9 +26,16 @@ function wishWrap() {
     }));
   };
 
+  const totalPrice = data
+    ?.reduce((acc, e) => {
+      const count = quantities[e.id] || 1;
+      return acc + (e.price || 0) * count;
+    }, 0)
+    .toFixed(2);
+
   const pro = data?.map((e) => {
     const count = quantities[e.id] || 1;
-    const totalPrice = (e.price || 0) * count;
+    const itemTotalPrice = (e.price || 0) * count;
 
     return (
       <div key={e.id} className="cart_pro">
@@ -42,9 +49,7 @@ function wishWrap() {
           <h4>{e.title}</h4>
         </div>
         <div className="cart_price_total">
-          <h4>
-            <h4>${totalPrice.toFixed(2)}</h4>
-          </h4>
+          <h4>${itemTotalPrice.toFixed(2)}</h4>
           <div className="counter2">
             <div className="count">
               <button onClick={() => incrementCount(e.id)}>+</button> {count}{" "}
@@ -76,9 +81,19 @@ function wishWrap() {
           </div>
         </div>
         {pro}
+        <div className="subtotal">
+          <div className="pr_t">
+            <div className="total_price">TOTAL</div>
+            <div className="Value_price">${totalPrice}</div>
+          </div>
+          <button>Check Out</button>
+        </div>
+        <div className="last1">
+          <button>Redeem</button>
+        </div>
       </div>
     </div>
   );
 }
 
-export default wishWrap;
+export default WishWrap;
