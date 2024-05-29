@@ -1,0 +1,71 @@
+.nav_admin {
+  height: 51px;
+  background: rgb(246, 247, 248);
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.nav_admin h1 {
+  color: rgb(51, 160, 255);
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: -1px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.nav_admin h3 {
+  color: rgb(38, 38, 38);
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: -1px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.admin_text button {
+  max-width: 338px;
+  height: 70px;
+  border-radius: 10px;
+  border: 0;
+  color: rgb(255, 255, 255);
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: 0%;
+  text-align: center;
+  cursor: pointer;
+  background: rgb(51, 160, 255);
+}
+.admin_text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: auto;
+  height: auto;
+  overflow: auto;
+}
+.admin_text p {
+  color: rgb(0, 0, 0);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 180%;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+.admin {
+  margin-top: 70px;
+}
+.admin h1 {
+  color: rgb(0, 0, 0);
+  font-family: Poppins;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 60px;
+  letter-spacing: -2%;
+  padding-bottom: 30px;
+}

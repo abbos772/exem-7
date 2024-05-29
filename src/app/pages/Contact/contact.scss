@@ -66,13 +66,14 @@
   padding-left: 20px;
   padding-top: 40px;
 }
-form {
+.ft {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 40px;
   flex-wrap: wrap;
 }
-form button {
+
+.ft button {
   width: 127px;
   height: 64px;
   background: #40bfff;
@@ -85,7 +86,7 @@ form button {
   color: white;
   cursor: pointer;
 }
-form textarea {
+textarea {
   width: 510.15px;
   height: 229.76px;
   padding: 20px;

@@ -78,9 +78,10 @@ function Contact() {
             </p>
           </div>
           <div className="contact_text">
-            <form onSubmit={handleSubmit} action="">
+            <form className="ft" onSubmit={handleSubmit} action="">
               <div className="bir">
                 <input
+                  className="in"
                   required
                   name="fname"
                   value={data.fname}
@@ -91,6 +92,7 @@ function Contact() {
               </div>
               <div className="bir">
                 <input
+                  className="in"
                   required
                   value={data.lname}
                   onChange={handleChange}
@@ -101,6 +103,7 @@ function Contact() {
                 />
               </div>
               <textarea
+                className="in"
                 required
                 value={data.other}
                 onChange={handleChange}
