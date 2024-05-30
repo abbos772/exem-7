@@ -14,7 +14,7 @@ import "./Product.scss";
 const Product = ({ data }) => {
   const dispatch = useDispatch();
   const wishes = useSelector((state) => state.wishes.value);
-
+  const cart = useSelector((state) => state.cart.value);
   return (
     <div className="carts container">
       {data.map((product) => (
@@ -29,18 +29,24 @@ const Product = ({ data }) => {
               />
               <div className="pro_svgs">
                 <div className="pro_like">
-                  <button onClick={() => dispatch(toogleLike(product))}>
+                  <button
+                    className="as"
+                    onClick={() => dispatch(toogleLike(product))}
+                  >
                     {wishes.some((item) => item.id === product.id) ? (
-                      <LuHeart className="as" style={{ color: "red" }} />
+                      <LuHeart style={{ color: "red" }} />
                     ) : (
-                      <LuHeart className="as" />
+                      <LuHeart />
                     )}
                   </button>
                 </div>
                 <div className="pro_cart">
-                  <button onClick={() => dispatch(addToCart(product))}>
-                    {wishes.some((item) => item.id === product.id) ? (
-                      <FiShoppingCart className="as" style={{ color: "red" }} />
+                  <button
+                    className="as"
+                    onClick={() => dispatch(addToCart(product))}
+                  >
+                    {cart.some((item) => item.id === product.id) ? (
+                      <FiShoppingCart className="as" />
                     ) : (
                       <FiShoppingCart className="as" />
                     )}
