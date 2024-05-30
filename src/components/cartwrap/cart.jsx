@@ -3,10 +3,13 @@ import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import Image from "next/image";
 import { removeItemFromCart } from "@/lib/slice/cardslice";
-import x from "@/app/img/x.png";
+import x from "@/img/x.png";
+import left from "@/img/left.png";
+import { Toaster, toast } from "react-hot-toast";
 import "./cart.scss";
 
 function WishWrap() {
+  const [toggle, setToggle] = useState(false);
   const dispatch = useDispatch();
   const data = useSelector((state) => state.cart.value);
 
@@ -24,6 +27,21 @@ function WishWrap() {
       ...prev,
       [id]: prev[id] > 1 ? prev[id] - 1 : 1,
     }));
+  };
+
+  const handlePayment = () => {
+    toast.success("Payment Successful!", {
+      style: {
+        borderRadius: "10px",
+        background: "#333",
+        color: "#fff",
+      },
+      iconTheme: {
+        primary: "#4CAF50",
+        secondary: "#FFFAEE",
+      },
+    });
+    setToggle(false);
   };
 
   const totalPrice = data
@@ -69,6 +87,7 @@ function WishWrap() {
 
   return (
     <div>
+      <Toaster />
       <div className="carts_pro container">
         <div className="pro_cart_text">
           <div className="pro_bir">
@@ -81,15 +100,60 @@ function WishWrap() {
           </div>
         </div>
         {pro}
-        <div className="subtotal">
-          <div className="pr_t">
-            <div className="total_price">TOTAL</div>
-            <div className="Value_price">${totalPrice}</div>
+        <div className="flex_sub">
+          <div className="last1">
+            <button className="btn_out">Redeem</button>
           </div>
-          <button>Check Out</button>
-        </div>
-        <div className="last1">
-          <button>Redeem</button>
+          <div className="subtotal">
+            <div className="pr_t">
+              <div className="total_price">TOTAL</div>
+              <div className="Value_price">${totalPrice}</div>
+            </div>
+            <button
+              className="btn_ch"
+              style={{ marginLeft: "12px" }}
+              onClick={() => setToggle(!toggle)}
+            >
+              Check Out
+            </button>
+            <div className={`big_box ${toggle ? "show" : ""}`}>
+              <button
+                className="btn_check"
+                style={{ marginLeft: "12px" }}
+                onClick={() => setToggle(!toggle)}
+              >
+                <Image src={left} alt="x" width={30} />
+              </button>
+              <div className="yana">
+                <div className="yana11">
+                  <div className="yana1">
+                    <input type="text" placeholder="First Name" name="" id="" />
+                  </div>
+                  <div className="yana1">
+                    <input type="text" placeholder="Last Name" name="" id="" />
+                  </div>
+                </div>
+                <div className="yana11">
+                  <div className="yana1">
+                    <input
+                      placeholder="Email Address"
+                      type="text"
+                      name=""
+                      id=""
+                    />
+                  </div>
+                  <textarea
+                    placeholder="Address for Delivery"
+                    name=""
+                    id=""
+                  ></textarea>
+                </div>
+                <button className="btn_ch" onClick={handlePayment}>
+                  Make Payment
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

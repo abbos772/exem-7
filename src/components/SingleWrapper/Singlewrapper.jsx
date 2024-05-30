@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import React, { memo, useState, useEffect } from "react";
 import Product from "../Products/Product";
-import cart2 from "../../app/img/cart_2.png";
+import cart2 from "@/img/cart_2.png";
 import { Circles } from "react-loader-spinner";
 import "./Single.css";
 import "swiper/css";
@@ -20,13 +20,13 @@ const Singlewrapper = ({ single_data, data }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
   }, []);
 
-  const incrementCount = () => setCount(count + 1);
-  const decrementCount = () => setCount(count > 1 ? count - 1 : 1);
+  const incrementCount = () => setCount((prevCount) => prevCount + 1);
+  const decrementCount = () =>
+    setCount((prevCount) => (prevCount > 1 ? prevCount - 1 : 1));
 
   const handleChange = (event) => setSelectedValue(event.target.value);
 

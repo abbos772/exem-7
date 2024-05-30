@@ -6,7 +6,7 @@ import { MdOutlineSearch } from "react-icons/md";
 import { CiMenuBurger } from "react-icons/ci";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "@/app/img/FOOTER.png";
+import Logo from "@/img/FOOTER.png";
 import "./Navbar.scss";
 
 function Navbar() {

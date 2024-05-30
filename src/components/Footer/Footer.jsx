@@ -1,10 +1,10 @@
 import React from "react";
 import "./Footer.css";
 import Image from "next/image";
-import Logo from "../../app/img/FOOTER.png";
-import facebook from "../../app/img/facebook.png";
-import twitter from "../../app/img/twitter.png";
-import banner from "../../app/img/banner.png";
+import Logo from "@/img/FOOTER.png";
+import facebook from "@/img/facebook.png";
+import twitter from "@/img/twitter.png";
+import banner from "@/img/banner.png";
 function Footer() {
   return (
     <div>

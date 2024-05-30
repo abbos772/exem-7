@@ -1,11 +1,15 @@
+"use client";
 import { createSlice } from "@reduxjs/toolkit";
 
 const cartSlice = createSlice({
   name: "cart",
   initialState: {
-    value: JSON.parse(localStorage.getItem("carts")) || [],
+    value: [],
   },
   reducers: {
+    hydrateCart(state, action) {
+      state.value = action.payload;
+    },
     addToCart(state, action) {
       let index = state.value.findIndex((el) => el?.id === action?.payload?.id);
       if (index < 0) {
@@ -39,11 +43,15 @@ const cartSlice = createSlice({
       state.value = state.value.filter((el) => el.id !== action.payload.id);
       localStorage.setItem("carts", JSON.stringify(state.value));
     },
-    removeAllItemsFromCart() {},
+    removeAllItemsFromCart(state) {
+      state.value = [];
+      localStorage.setItem("carts", JSON.stringify(state.value));
+    },
   },
 });
 
 export const {
+  hydrateCart,
   addToCart,
   decrementCartQuantity,
   incrementCartQuantity,
