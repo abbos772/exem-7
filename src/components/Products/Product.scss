@@ -76,7 +76,7 @@
 }
 .product_card_text {
   text-align: center;
-  padding: 10px;
+  padding: 0px;
 }
 .product_card_text2 {
   display: flex;
@@ -135,4 +135,10 @@
 .as {
   border: 0;
   background: 0;
+}
+.link {
+  text-decoration: none;
+}
+.rat {
+  color: #bfc7d6;
 }

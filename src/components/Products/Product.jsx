@@ -58,10 +58,11 @@ const Product = ({ data }) => {
           </div>
           <div className="pro_text">
             <div className="product_card_text">
-              <Link href={`/single/${product.id}`}>
+              <Link className="link" href={`/single/${product.id}`}>
                 <h3>{product.title.slice(0, 25)}...</h3>
               </Link>
-              <Rating value={product.rating} readOnly />
+              <Rating value={product.rating.rate} readOnly />
+              <p className="rat">({product.rating.rate})</p>
             </div>
             <div className="product_card_text2">
               <h3>${product.price.toFixed(2)}</h3>
