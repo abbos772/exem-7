@@ -195,7 +195,7 @@
   flex-direction: column;
   gap: 20px;
   margin: 0 auto;
-  margin-top: 250px;
+  margin-top: 150px;
 }
 .yana11 {
   display: flex;
@@ -240,4 +240,32 @@
   text-align: center;
   text-transform: capitalize;
   background: rgb(51, 160, 255);
+}
+.yana111 {
+  padding-right: 425px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+.yana0 {
+  width: 378.72px;
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.yana0:hover {
+  /* Neutral/Light */
+  background: rgb(235, 240, 255);
+  width: 378.72px;
+  height: 56px;
+}
+.ic {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cla {
+  color: rgb(64, 191, 255);
 }

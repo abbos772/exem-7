@@ -7,6 +7,9 @@ import x from "@/img/x.png";
 import left from "@/img/left.png";
 import { Toaster, toast } from "react-hot-toast";
 import "./cart.scss";
+import { FaRegCreditCard } from "react-icons/fa";
+import { FaPaypal } from "react-icons/fa";
+import { BsBank2 } from "react-icons/bs";
 
 function WishWrap() {
   const [toggle, setToggle] = useState(false);
@@ -42,6 +45,24 @@ function WishWrap() {
       },
     });
     setToggle(false);
+  };
+
+  const handleCheckout = () => {
+    if (data.length === 0) {
+      toast.error("Your cart is empty!", {
+        style: {
+          borderRadius: "10px",
+          background: "#333",
+          color: "#fff",
+        },
+        iconTheme: {
+          primary: "#FF0000",
+          secondary: "#FFFAEE",
+        },
+      });
+      return;
+    }
+    setToggle(!toggle);
   };
 
   const totalPrice = data
@@ -109,10 +130,12 @@ function WishWrap() {
               <div className="total_price">TOTAL</div>
               <div className="Value_price">${totalPrice}</div>
             </div>
+
             <button
               className="btn_ch"
               style={{ marginLeft: "12px" }}
-              onClick={() => setToggle(!toggle)}
+              onClick={handleCheckout}
+              disabled={data.length === 0}
             >
               Check Out
             </button>
@@ -147,6 +170,29 @@ function WishWrap() {
                     name=""
                     id=""
                   ></textarea>
+                </div>
+                <div className="yana111">
+                  <div className="yana0">
+                    <div className="ic">
+                      <FaRegCreditCard className="cla" />
+                      <p>Credit Card Or Debit</p>
+                    </div>
+                    <input type="checkbox" name="" id="" />
+                  </div>
+                  <div className="yana0">
+                    <div className="ic">
+                      <FaPaypal className="cla" />
+                      <p>Paypal</p>
+                    </div>
+                    <input type="checkbox" name="" id="" />
+                  </div>
+                  <div className="yana0">
+                    <div className="ic">
+                      <BsBank2 className="cla" />
+                      <p>Bank Transfer</p>
+                    </div>
+                    <input type="checkbox" name="" id="" />
+                  </div>
                 </div>
                 <button className="btn_ch" onClick={handlePayment}>
                   Make Payment
