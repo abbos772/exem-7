@@ -24,7 +24,7 @@ function Login() {
       const data = await res.json();
       if (data.token) {
         toast.success("Successful!");
-        router.push("/pages/Admin");
+        router.push("/admin");
       } else {
         toast.error("Login failed");
       }
