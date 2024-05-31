@@ -5,7 +5,7 @@ import { Rating } from "@mui/material";
 import { LuHeart } from "react-icons/lu";
 import { FiShoppingCart } from "react-icons/fi";
 import { useDispatch, useSelector } from "react-redux";
-import { toogleLike } from "@/lib/slice/wishlistSlice";
+import { toggleLike } from "@/lib/slice/wishlistSlice";
 import { addToCart } from "@/lib/slice/cardslice";
 import Link from "next/link";
 import PropTypes from "prop-types";
@@ -15,6 +15,7 @@ const Product = ({ data }) => {
   const dispatch = useDispatch();
   const wishes = useSelector((state) => state.wishes.value);
   const cart = useSelector((state) => state.cart.value);
+
   return (
     <div className="carts container">
       {data.map((product) => (
@@ -31,7 +32,7 @@ const Product = ({ data }) => {
                 <div className="pro_like">
                   <button
                     className="as"
-                    onClick={() => dispatch(toogleLike(product))}
+                    onClick={() => dispatch(toggleLike(product))}
                   >
                     {wishes.some((item) => item.id === product.id) ? (
                       <LuHeart style={{ color: "red" }} />

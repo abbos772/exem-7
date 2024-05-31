@@ -1,24 +1,35 @@
-"use client";
 import { createSlice } from "@reduxjs/toolkit";
+
+const getInitialWishlistState = () => {
+  if (typeof window !== "undefined") {
+    const wishes = localStorage.getItem("wishes");
+    return wishes ? JSON.parse(wishes) : [];
+  }
+  return [];
+};
 
 export const wishlistSlice = createSlice({
   name: "wishlist",
   initialState: {
-    value: JSON.parse(localStorage.getItem("wishes")) || [],
+    value: [],
   },
   reducers: {
-    toogleLike(state, action) {
-      let index = state.value.findIndex((el) => el.id === action.payload.id);
+    initialize(state) {
+      state.value = getInitialWishlistState();
+    },
+    toggleLike(state, action) {
+      const index = state.value.findIndex((el) => el.id === action.payload.id);
       if (index < 0) {
         state.value = [...state.value, action.payload];
-        localStorage.setItem("wishes", JSON.stringify(state.value));
       } else {
         state.value = state.value.filter((el) => el.id !== action.payload.id);
+      }
+      if (typeof window !== "undefined") {
         localStorage.setItem("wishes", JSON.stringify(state.value));
       }
     },
   },
 });
 
-export const { toogleLike } = wishlistSlice.actions;
+export const { initialize, toggleLike } = wishlistSlice.actions;
 export default wishlistSlice.reducer;

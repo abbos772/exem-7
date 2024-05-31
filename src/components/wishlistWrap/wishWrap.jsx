@@ -1,10 +1,17 @@
 "use client";
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { initialize } from "../../lib/slice/wishlistSlice";
 import Product from "../Products/Product";
 
-function wishWrap() {
-  let data = useSelector((s) => s.wishes.value);
+function WishWrap() {
+  const dispatch = useDispatch();
+  const data = useSelector((state) => state.wishes.value);
+
+  useEffect(() => {
+    dispatch(initialize());
+  }, [dispatch]);
+
   return (
     <div>
       <Product data={data} />
@@ -12,4 +19,4 @@ function wishWrap() {
   );
 }
 
-export default wishWrap;
+export default WishWrap;

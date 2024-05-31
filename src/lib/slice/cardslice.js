@@ -1,10 +1,18 @@
 "use client";
 import { createSlice } from "@reduxjs/toolkit";
 
+const getInitialCartState = () => {
+  if (typeof window !== "undefined") {
+    const storedCart = localStorage.getItem("carts");
+    return storedCart ? JSON.parse(storedCart) : [];
+  }
+  return [];
+};
+
 const cartSlice = createSlice({
   name: "cart",
   initialState: {
-    value: [],
+    value: getInitialCartState(),
   },
   reducers: {
     hydrateCart(state, action) {
@@ -15,7 +23,9 @@ const cartSlice = createSlice({
       if (index < 0) {
         state.value = [...state.value, { ...action.payload, quantity: 1 }];
       }
-      localStorage.setItem("carts", JSON.stringify(state.value));
+      if (typeof window !== "undefined") {
+        localStorage.setItem("carts", JSON.stringify(state.value));
+      }
     },
     incrementCartQuantity(state, action) {
       let index = state.value?.findIndex((el) => el.id === action.payload.id);
@@ -26,7 +36,9 @@ const cartSlice = createSlice({
           return item;
         }
       });
-      localStorage.setItem("carts", JSON.stringify(state.value));
+      if (typeof window !== "undefined") {
+        localStorage.setItem("carts", JSON.stringify(state.value));
+      }
     },
     decrementCartQuantity(state, action) {
       let index = state.value?.findIndex((el) => el.id === action.payload.id);
@@ -37,15 +49,21 @@ const cartSlice = createSlice({
           return item;
         }
       });
-      localStorage.setItem("carts", JSON.stringify(state.value));
+      if (typeof window !== "undefined") {
+        localStorage.setItem("carts", JSON.stringify(state.value));
+      }
     },
     removeItemFromCart(state, action) {
       state.value = state.value.filter((el) => el.id !== action.payload.id);
-      localStorage.setItem("carts", JSON.stringify(state.value));
+      if (typeof window !== "undefined") {
+        localStorage.setItem("carts", JSON.stringify(state.value));
+      }
     },
     removeAllItemsFromCart(state) {
       state.value = [];
-      localStorage.setItem("carts", JSON.stringify(state.value));
+      if (typeof window !== "undefined") {
+        localStorage.setItem("carts", JSON.stringify(state.value));
+      }
     },
   },
 });
