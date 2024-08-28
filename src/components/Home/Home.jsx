@@ -224,9 +224,11 @@ const Home = async () => {
               </div>
             </div>
           </div>
-          <div className="last_search">
-            <input type="text" placeholder="Search query..." />
-            <button>Search</button>
+          <div className="last">
+            <div className="last_search">
+              <input type="text" placeholder="Search query..." />
+              <button>Search</button>
+            </div>
           </div>
         </div>
       </div>

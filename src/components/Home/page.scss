@@ -390,16 +390,24 @@
 .tony p {
   text-decoration: line-through;
 }
+.last {
+  padding-left: 30px;
+  padding-right: 30px;
+}
 .last_search {
+  flex-wrap: wrap;
+  width: 100%;
+  flex: 1;
   max-width: 633px;
   height: 62px;
   margin: 0 auto;
   border: 2px solid rgb(188, 221, 254);
   display: flex;
+  justify-content: space-between;
   margin-top: 100px;
 }
 .last_search input {
-  flex: 1;
+  flex: 2;
   border: 0;
   outline: 0;
   background: 0;
@@ -412,7 +420,8 @@
   letter-spacing: 0%;
 }
 .last_search button {
-  width: 127px;
+  height: 60px;
+  flex: 1;
   background: rgb(64, 191, 255);
   border: 0;
   cursor: pointer;
@@ -422,18 +431,125 @@
   font-weight: 600;
   line-height: 30px;
   letter-spacing: 0%;
-  text-align: center;
+}
+@media (max-width: 600px) {
+  .nike_big_price h3 {
+    font-size: 24px;
+  }
+  .card_nikeairs {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    background-color: #f6f6f6;
+    position: relative;
+    top: -100px;
+  }
+  .card_nike {
+    position: relative;
+    flex: 1;
+    border-radius: 5px 0px 0px 0px;
+    transition: 0.3s;
+    padding: 20px;
+    .card_img {
+      text-align: center;
+    }
+  }
+  .card_nike:hover {
+    background-color: #e2e2e2;
+    border-radius: 5px;
+  }
+  .nike_price {
+    position: relative;
+    top: 10px;
+  }
+  .nike_big_price {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .card_img img {
+    margin-top: -50px;
+    width: 200px;
+    height: 200px;
+  }
+  .card_img h2 {
+    color: rgb(34, 50, 99);
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0.5px;
+    text-align: center;
+  }
+}
+@media (max-width: 400px) {
+  .nike_big_price h3 {
+    font-size: 18px;
+  }
+  .card_nikeairs {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    background-color: #f6f6f6;
+    position: relative;
+    top: -100px;
+  }
+  .card_nike {
+    position: relative;
+    flex: 1;
+    border-radius: 5px 0px 0px 0px;
+    transition: 0.3s;
+    padding: 20px;
+    .card_img {
+      text-align: center;
+    }
+  }
+  .card_nike:hover {
+    background-color: #e2e2e2;
+    border-radius: 5px;
+  }
+  .nike_price {
+    position: relative;
+    top: 10px;
+  }
+  .nike_price p {
+    font-size: 12px;
+  }
+  .nike_price b {
+    font-size: 12px;
+  }
+  .nike_big_price {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .card_img img {
+    margin-top: -50px;
+    width: 200px;
+    height: 200px;
+  }
+  .card_img h2 {
+    color: rgb(34, 50, 99);
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0.5px;
+    text-align: center;
+  }
 }
 @media (max-width: 768px) {
   .cards_text_href {
     gap: 25px;
   }
   .cards_text_href p {
-    font-size: 16px;
+    font-size: 12px;
   }
   .blue_img img {
-    width: 300px;
-    height: 300px;
+    width: 200px !important;
+    height: 200px !important;
     text-align: center;
     margin: 0 auto;
   }
